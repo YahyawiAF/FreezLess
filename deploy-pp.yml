@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feezless-pp
+spec:
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: feezless-pp
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: feezless-pp
+    spec:
+      containers:
+        - name: feezless-pp
+          image: gmccontainerregistry.azurecr.io/gomycode/feezless-pp:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3003
+          env:
+            - name: NODE_ENV
+              value: "development"
+            - name: PORT
+              value: "3003"
+            - name: DATABASE_URL_DEV
+              value: "mongodb+srv://feezless-server:gomycode@feezless-cluster-7msgt.azure.mongodb.net/feezless-pp?retryWrites=true&w=majority"
+            - name: DATABASE_URL_PROD
+              value: "mongodb+srv://feezless-server:gomycode@feezless-cluster-7msgt.azure.mongodb.net/feezless-pp?retryWrites=true&w=majority"
+            - name: DATABASE_URL_TEST
+              value: "mongodb+srv://feezless-server:gomycode@feezless-cluster-7msgt.azure.mongodb.net/feezless-pp?retryWrites=true&w=majority"
+            - name: BASE_URL
+              value: "https://feezless-pp-api.eng.gomycode.co/"
+            - name: FRONT_URL
+              value: "https://feezless-pp.eng.gomycode.co/"
+            - name: JWT_SECRET
+              value: "zgij5/yti55jgnzijgnijj333z@jengzg0_er51erherh4eherh4e5h1e"
+            - name: JWT_EXP
+              value: "100d"
+            - name: MAIL_SEND_DEV_ENV
+              value: "true"
+            - name: MAIL_USER
+              value: "testgomycode@gmail.com"
+            - name: MAIL_PASSWORD
+              value: "Gomycode123"
+      imagePullSecrets:
+        - name: gomycode-azure-registry-creds
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: feezless-pp
+  labels:
+    app: feezless-pp
+spec:
+  ports:
+    - name: http
+      port: 3003
+      protocol: TCP
+      targetPort: 3003
+  selector:
+    app: feezless-pp
+  type: ClusterIP
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: feezless-pp
+spec:
+  tls:
+    - hosts:
+        - feezless-pp-api.eng.gomycode.co
+      secretName: default-tls-gomycode-co
+  rules:
+    - host: feezless-pp-api.eng.gomycode.co
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: feezless-pp
+              servicePort: 3003

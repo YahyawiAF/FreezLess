@@ -1,0 +1,3622 @@
+{
+	"info": {
+		"_postman_id": "155e41dd-8c6b-45c1-a78c-aa459c486ed5",
+		"name": "FeeZLess",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signUp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f3b09b2e-8d98-4928-8d24-f99c52301b3a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"email@gomycode.co\",\n    \"password\": \"Gomycode123\",\n    \"firstName\": \"email\",\n    \"lastName\": \"test\",\n    \"role\": \"Buyer\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"zied.naifar@gomycode.co\",\n\t\"password\": \"Gomycode123\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/signin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signIn",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"email18@test.co\",\n\t\"password\": \"Pwd12345678\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/auth/signin",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1126"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"466-tc38g00x7+OTDIddS2zjA1h4wDE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 07:55:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"token_created\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp7ImVtYWlsVmVyaWZpZWQiOnRydWUsImZpcnN0Q29ubmVjdGlvbiI6dHJ1ZX0sInByb3BlcnRpZXMiOltdLCJyb2xlcyI6W10sIl9pZCI6IjVkZjM0NmUwMzEyZDg3NWNlYzU2MTA4YyIsImVtYWlsIjoiZW1haWwxOEB0ZXN0LmNvIiwiZmlyc3ROYW1lIjoiVGVzdDEiLCJsYXN0TmFtZSI6IlRlc3QxIiwibm90aWZpY2F0aW9ucyI6W10sImNyZWF0ZWRBdCI6IjIwMTktMTItMTNUMDg6MDg6MDAuMjgwWiIsInVwZGF0ZWRBdCI6IjIwMTktMTItMTNUMDg6MDg6MjguOTQ1WiIsIl9fdiI6MCwiY2l2aWxTdGF0dXMiOiJvcGVuX3JlbGF0aW9ucyIsInBob25lIjoiMTIzNDU2Nzg5IiwicHJvZmVzc2lvbiI6bnVsbCwic2VwYXJhdGlvblBsYW4iOiJzZXBhcmF0aW9uX3BsYW5fMSJ9LCJpYXQiOjE1NzY1NjkzMTYsImV4cCI6MTU3NzAwMTMxNn0.6JUid2pSrMA-4phXh4wOzB1pTqkexWX9wn7335Ntf4U\",\n        \"user\": {\n            \"state\": {\n                \"emailVerified\": true,\n                \"firstConnection\": true\n            },\n            \"properties\": [],\n            \"roles\": [],\n            \"_id\": \"5df346e0312d875cec56108c\",\n            \"email\": \"email18@test.co\",\n            \"firstName\": \"Test1\",\n            \"lastName\": \"Test1\",\n            \"notifications\": [],\n            \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n            \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n            \"__v\": 0,\n            \"civilStatus\": \"open_relations\",\n            \"phone\": \"123456789\",\n            \"profession\": null,\n            \"separationPlan\": \"separation_plan_1\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "confirmEmail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"2edc09578da9cc850bb85036dbd3e09ce40e3064\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/confirmemail",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"confirmemail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendEmailResetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"email14@test.co\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/sendresetemail",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"sendresetemail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\": \"a1eefa3f14fc0362e036bd421a3d22e62fbc1f1d\",\n\t\"password\": \"Pwd123456789\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/resetpassword",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"resetpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{token_seller}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"Pwd123456789\",\n\t\"newPassword\": \"Pwd12345678\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/updatepassword",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"updatepassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resendEmailVerificationToken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"abdeljalil.ghattas@gomycode.co\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/resendemailverificationtoken",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"resendemailverificationtoken"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ddd5ab42-1e54-47bc-94ab-373f88e1e56d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c3872e38-5e04-4415-b0a9-4562b4efd21a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "me",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token_seller}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/user/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{token_buyer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"civil_status_1\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateAvailabilities",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{token_seller}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"availabilities\": [\n        {\n            \"start\": \"2020-01-06T09:00:00.00Z\",\n            \"end\": \"2020-01-06T12:00:00.00Z\"\n        },\n        {\n            \"start\": \"2020-01-07T08:00:00.00Z\",\n            \"end\": \"2020-01-07T13:00:00.00Z\"\n        },\n        {\n            \"start\": \"2020-01-06T16:00:00.00Z\",\n            \"end\": \"2020-01-06T17:00:00.00Z\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/availabilities/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"availabilities",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Calendar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/calendar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"calendar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "SetFcmToken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"aaa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/setfcmtoken",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"setfcmtoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestNotifications",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/testNotifications",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"testNotifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNotifications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/getNotifications",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"getNotifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/getAllUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a263e786-30d0-446a-b926-b5eca347737b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a86279b6-8be8-4534-af45-bca6bac58001",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "selectsLists",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selectsListsType\": \"BankGuarantee\",\n    \"code\": \"bank_guarantee_3\",\n    \"displayedLabel\": \"Bank guarantee 3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/selectslists/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"selectslists",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/selectslists/getall",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"selectslists",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "property",
+			"item": [
+				{
+					"name": "UpdateProperty",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"propertyType\": \"property_type_3\",\n    \"linkToProperty\": \"link_to_property_1\",\n    \"legalForm\": \"legal_form_2\",\n    \"siret\": \"123456788\",\n    \"sellingReason\": \"selling_reason_3\",\n    \"cornerBusiness\": \"true\",\n    \"totalAreaSize\": \"123456\",\n    \"kitchen\": \"true\",\n    \"kitchenLevel\": \"1\",\n    \"kitchenAreaSize\": \"101\",\n    \"wc\": \"true\",\n    \"wcLevel\": \"1\",\n    \"terrace\": \"true\",\n    \"terracePlatesNbre\": \"20\",\n    \"extraction\": \"true\",\n    \"linearShowcase\": \"4\",\n    \"interiorPlatesNbre\": \"40\",\n    \"ivLicense\": \"true\",\n    \"housing\": \"true\",\n    \"housingAreaSize\": \"100\",\n    \"premisesState\": \"premises_state_1\",\n    \"reparationNeeded\": \"true\",\n    \"turnover\": \"50000\",\n    \"heldSince\": \"2019-12-17T10:45:50.260Z\",\n    \"servicesTime\": \"services_time_3\",\n    \"workingDaysNbre\": \"3\",\n    \"annualLeave\": \"Je part l'été\",\n    \"leaseOwner\": \"true\",\n    \"leaseDuration\": \"lease_duration_3\",\n    \"leaseRenewal\": \"lease_renewal_3\",\n    \"leaseRenewalDate\": \"2019-12-17T10:45:50.260Z\",\n    \"leaseRenewalExtraJudicialDocument\": \"true\",\n    \"leaseRenewalRequestSince3Months\": \"true\",\n    \"leaseNewProposition\": \"true\",\n    \"leaseNewRent\": \"1000\",\n    \"leaseOwnerAnswer\": \"lease_owner_answer_1\",\n    \"leaseAuthorizedActivity\": \"authorized activity\",\n    \"monthlyRent\": \"1000\",\n    \"employeeTakeOver\": \"true\",\n    \"disabledStandards\": \"true\",\n    \"suggestedPriceMin\": \"300\",\n    \"suggestedPriceMax\": \"300\",\n    \"price\": \"400\",\n    \"priceIsNegotiable\": \"true\",\n    \"mandatoryIdVisitation\": \"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/property/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetProperty",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/property/get",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"get"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetPropertyDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"property\": \"5e0d9827d536b06a241ffa43\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/property/getdetails",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"getdetails"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetPropertiesList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/property/getPropertiesList",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"getPropertiesList"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "LikeProperty",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"property\": \"5e0d9827d536b06a241ffa43\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/property/like",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"like"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetFavoritesProperties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/property/getfavorites",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"getfavorites"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetVisitedProperties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/property/getVisitedProperties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"getVisitedProperties"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllProperties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/property/getAllProperties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"getAllProperties"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "propertyPreference",
+			"item": [
+				{
+					"name": "UpdatePropertyPreference",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"propertyType\": \"property_type_2\",\n    \"linkToProperty\": \"link_to_property_1\",\n    \"dreamProperty\": \"test\",\n    \"concept\": \"test\",\n    \"district\": 12,\n    \"town\": \"Marsilia\",\n    \"extraction\": true,\n    \"ivLicense\": false,\n    \"terrace\": false,\n    \"employeeTakeOver\": true,\n    \"employeeTakeOverNegotiable\": false,\n    \"acquisitionWay\": \"aquisition_way_1\",\n    \"contribution\": true,\n    \"bankGuarantee\": \"bank_guarantee_1\",\n    \"transferPriceMin\": 200,\n    \"transferPriceMax\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/propertypreference/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"propertypreference",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetPropertyPreference",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/propertypreference/get",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"propertypreference",
+								"get"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "meeting",
+			"item": [
+				{
+					"name": "GetPropertyMeetings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"property\": \"5e0d9827d536b06a241ffa43\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/meeting/getPropertyMeetings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"meeting",
+								"getPropertyMeetings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Availabilities",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"meeting\":\"5e0dcc4b4aac616178c15766\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/meeting/availabilities",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"meeting",
+								"availabilities"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Propose",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"date\":\"2020-01-06T09:00:00.000Z\",\n\t\"type\":\"call\",\n\t\"property\":\"5e0d9827d536b06a241ffa43\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/meeting/propose",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"meeting",
+								"propose"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Respond",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"meeting\": \"5e0dcc4b4aac616178c15766\",\n\t\"response\": \"report\",\n\t\"date\":\"2020-12-27T08:00:00.000Z\",\n\t\"type\":\"visit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/meeting/respond",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"meeting",
+								"respond"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllMeetings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/meeting/getAllMeetings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"meeting",
+								"getAllMeetings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RespondAfterMeeting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"meeting\": \"5e0dcc4b4aac616178c15766\",\n\t\"response\": \"refuse\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/meeting/respondAfterMeeting",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"meeting",
+								"respondAfterMeeting"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "MakeOffer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/hp/Downloads/Feezless - UI KIT.pdf"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/file/makeOffer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"makeOffer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "ResponseToOffer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_seller2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"meeting\": \"5e0dcc4b4aac616178c15766\",\n\t\"response\": \"refuse\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/meeting/responseToOffer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"meeting",
+								"responseToOffer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "131f3396-2896-471f-9e45-b4fe8bee4bc0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "70c9aae6-362f-48e4-9294-97015948e678",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "UploadFile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/hp/Downloads/Feezless - UI KIT.pdf"
+								},
+								{
+									"key": "user",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "meeting",
+									"value": "",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/file/upload",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DownloadFile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fileName\": \"-dZ-Kq61\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/file/download",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"download"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetFile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uploadedFile\": \"5e3abbb9e2a3245098b52b35\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/file/getFile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"getFile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllFile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/file/getAllFiles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"getAllFiles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetFilesToValidate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/file/getFilesToValidate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"getFilesToValidate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Validate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "{{token_buyer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"uploadedFile\" : \"5e3abbb9e2a3245098b52b35\",\n\t\"status\": \"valid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/file/validate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"validate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test1\",\n    \"phone\": \"123456789\",\n    \"civilStatus\": \"open_relations\",\n    \"separationPlan\": \"separation_plan_1\",\n    \"profession\": \"Najar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/user/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-uY27ZlFBm+kXs89VZzTwLbyJB/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 09:03:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"responseCode\": \"user_updated\",\n    \"data\": {\n        \"state\": {\n            \"emailVerified\": true,\n            \"firstConnection\": true\n        },\n        \"properties\": [],\n        \"roles\": [],\n        \"_id\": \"5df346e0312d875cec56108c\",\n        \"email\": \"email18@test.co\",\n        \"firstName\": \"Test1\",\n        \"lastName\": \"Test1\",\n        \"notifications\": [],\n        \"createdAt\": \"2019-12-13T08:08:00.280Z\",\n        \"updatedAt\": \"2019-12-13T08:08:28.945Z\",\n        \"__v\": 0,\n        \"civilStatus\": \"open_relations\",\n        \"phone\": \"123456789\",\n        \"profession\": null,\n        \"separationPlan\": \"separation_plan_1\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2ddfbc09-c7dd-492d-af03-b0d1c1cf750d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9b507db4-0056-41ed-8935-8eaa7e6e8d55",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5d68d2f0-586c-43e7-a6c0-023154c3d580",
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"id": "e4d1e9e1-1582-49cd-a72a-edc847305451",
+			"key": "token_seller",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp7ImVtYWlsVmVyaWZpZWQiOnRydWUsImZpcnN0Q29ubmVjdGlvbiI6ZmFsc2V9LCJwcm9wZXJ0aWVzIjpbIjVkZmNhNmU2MWViYTNjNGVkMGM3NTM4NSIsIjVkZmNhOWZmMTg2MGQ5MDMzNDBmMjUwMSIsIjVkZmNiNmZjMTI3NmIwMGM1YzY5N2MyNSIsIjVkZmNiNzQ5MDcyNzUyNDM1MGU4MzgwZSIsIjVkZmNiN2EyOGZjNGU1MGI2MGQ0ZTM3ZSIsIjVkZmNiN2U4ZWFiOWE2MzQxYzhjNjY4OCIsIjVkZmNjZGY5NjdmNGVlMjllODkwMzBmZCIsIjVkZmNkMDU4OTE5ZThmMTQ2NDU3MDUxOCIsIjVkZmNkMDVjOTE5ZThmMTQ2NDU3MDUxOSIsIjVkZmNkMGM1NDU4MTU0MTU1NDI4OTA0MCIsIjVkZmNkMTQ5ZGRlYTIwMGIxYzdjMDIxNCIsIjVkZmNkMTkwZmNkZTczMGZlODRkNjBkZCIsIjVkZmNkMWM3ZDhkODQxMWM5MGNhOGI4MSIsIjVkZmNkMWZlMzQzN2IxMGQ0Y2ZhODQyYyIsIjVkZmNkMjdjMGI1ZGU2MDZmNDk2ZmJjZCJdLCJwcm9wZXJ0eVByZWZlcmVuY2VzIjpbIjVkZmM4M2FmM2UxM2I5NGZiODgzNGYzNyIsIjVkZmNhNDUyYzdhYTdlNDhmODZiNjRhOCJdLCJyb2xlcyI6WyJCdXllciIsIlNlbGxlciJdLCJfaWQiOiI1ZGY4YjVkMzkwMWYwZDJhNjgwMzY3MWUiLCJlbWFpbCI6ImVtYWlsMjRAdGVzdC5jbyIsImZpcnN0TmFtZSI6IlRlc3QxIiwibGFzdE5hbWUiOiJUZXN0MSIsIm5vdGlmaWNhdGlvbnMiOltdLCJjcmVhdGVkQXQiOiIyMDE5LTEyLTE3VDExOjAyOjQzLjk2N1oiLCJ1cGRhdGVkQXQiOiIyMDE5LTEyLTIwVDEzOjU0OjA0LjE1M1oiLCJfX3YiOjM0LCJjaXZpbFN0YXR1cyI6ImNpdmlsX3N0YXR1c18xIiwicGhvbmUiOiIxMjM0NTY3ODkiLCJwcm9mZXNzaW9uIjpudWxsLCJzZXBhcmF0aW9uUGxhbiI6InNlcGFyYXRpb25fcGxhbl8xIn0sImlhdCI6MTU3NzA4MjI3NSwiZXhwIjoxNTc3NTE0Mjc1fQ._BDdd4ZWd3IFmsz57RsibsOvF2v9qftIeLukY-l5dwI",
+			"type": "string"
+		},
+		{
+			"id": "2c47c96b-5914-4e35-913b-34b859c3f398",
+			"key": "token_buyer",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp7ImVtYWlsVmVyaWZpZWQiOnRydWUsImZpcnN0Q29ubmVjdGlvbiI6ZmFsc2V9LCJwcm9wZXJ0aWVzIjpbXSwicHJvcGVydHlQcmVmZXJlbmNlcyI6W10sInJvbGVzIjpbIkJ1eWVyIl0sIl9pZCI6IjVlMGQ5N2U2ZDUzNmIwNmEyNDFmZmE0MiIsImVtYWlsIjoiemllZC5uYWlmYXJAZ29teWNvZGUuY28iLCJmaXJzdE5hbWUiOiJaaWVkIiwibGFzdE5hbWUiOiJOYWlmYXIiLCJhdmFpbGFiaWxpdGllcyI6W10sIm5vdGlmaWNhdGlvbnMiOltdLCJjcmVhdGVkQXQiOiIyMDIwLTAxLTAyVDA3OjEyOjM4LjM0MFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAxLTAyVDA3OjEyOjM4LjQ5MVoiLCJfX3YiOjB9LCJpYXQiOjE1Nzc5NTM0MTYsImV4cCI6MTU3ODM4NTQxNn0.3ypupYfFXcRpiIEvBC-wBzYW9R11RhS2mw8Sld62Riw",
+			"type": "string"
+		},
+		{
+			"id": "ce1fb9e6-81a6-4b80-845e-8548d6ba64af",
+			"key": "token_seller2",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp7ImVtYWlsVmVyaWZpZWQiOnRydWUsImZpcnN0Q29ubmVjdGlvbiI6ZmFsc2V9LCJwcm9wZXJ0aWVzIjpbXSwiZmF2b3JpdGVzUHJvcGVydGllcyI6W10sInByb3BlcnR5UHJlZmVyZW5jZXMiOltdLCJyb2xlcyI6WyJCdXllciJdLCJfaWQiOiI1ZTE1YTA4ZTYzMTA1NDM2ODRlOGIxZWMiLCJlbWFpbCI6ImVtYWlsQGdvbXljb2RlLmNvIiwiZmlyc3ROYW1lIjoiZW1haWwiLCJsYXN0TmFtZSI6InRlc3QiLCJhdmFpbGFiaWxpdGllcyI6W10sIm5vdGlmaWNhdGlvbnMiOltdLCJjcmVhdGVkQXQiOiIyMDIwLTAxLTA4VDA5OjI3OjQyLjc4OVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAxLTA4VDA5OjI3OjQzLjA0MloiLCJfX3YiOjB9LCJpYXQiOjE1Nzg0NzU3MDIsImV4cCI6MTU3ODkwNzcwMn0.Q6en5Se2Jmmp9UzVNzAsoq4metrI8-1bikiZixhFutU",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
